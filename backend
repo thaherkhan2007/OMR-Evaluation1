@@ -1,0 +1,164 @@
+return <ResultsTable />;
+case "analytics":
+  return (
+    <div className="space-y-6">
+      <h2 className="text-2xl font-bold text-foreground">Analytics Dashboard</h2>
+      <div className="bg-card border border-border rounded-lg p-8 text-center">
+        <p className="text-muted-foreground">Advanced analytics and reporting features coming soon...</p>
+      </div>
+    </div>
+  );
+
+case "answer-keys":
+  return (
+    <div className="space-y-6">
+      <h2 className="text-2xl font-bold text-foreground">Answer Key Management</h2>
+      <div className="bg-card border border-border rounded-lg p-8 text-center">
+        <p className="text-muted-foreground">Answer key management interface coming soon...</p>
+      </div>
+    </div>
+  );
+
+case "students":
+  return (
+    <div className="space-y-6">
+      <h2 className="text-2xl font-bold text-foreground">Student Management</h2>
+      <div className="bg-card border border-border rounded-lg p-8 text-center">
+        <p className="text-muted-foreground">Student management features coming soon...</p>
+      </div>
+    </div>
+  );
+
+case "exports":
+  return (
+    <div className="space-y-6">
+      <h2 className="text-2xl font-bold text-foreground">Exports</h2>
+      <div className="bg-card border border-border rounded-lg p-8 text-center">
+        <p className="text-muted-foreground">Export functionality coming soon...</p>
+      </div>
+    </div>
+  );import { useState } from "react";
+import Sidebar from "@/components/layout/Sidebar";
+import DashboardStats from "@/components/dashboard/DashboardStats";
+import UploadZone from "@/components/upload/UploadZone";
+import ResultsTable from "@/components/results/ResultsTable";
+
+const Index = () => {
+  const [activeTab, setActiveTab] = useState("dashboard");
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case "dashboard":
+        return <DashboardStats />;
+      case "upload":
+        return <UploadZone />;
+      case "results":
+        return <ResultsTable />;
+      case "analytics":
+        return (
+          <div className="space-y-6">
+            <h2 className="text-2xl font-bold text-foreground">Analytics Dashboard</h2>
+            <div className="bg-card border border-border rounded-lg p-8 text-center">
+              <p className="text-muted-foreground">
+                Advanced analytics and reporting features coming soon...
+              </p>
+            </div>
+          </div>
+        );
+
+      case "answer-keys":
+        return (
+          <div className="space-y-6">
+            <h2 className="text-2xl font-bold text-foreground">Answer Key Management</h2>
+            <div className="bg-card border border-border rounded-lg p-8 text-center">
+              <p className="text-muted-foreground">
+                Answer key management interface coming soon...
+              </p>
+            </div>
+          </div>
+        );
+
+      case "students":
+        return (
+          <div className="space-y-6">
+            <h2 className="text-2xl font-bold text-foreground">Student Management</h2>
+            <div className="bg-card border border-border rounded-lg p-8 text-center">
+              <p className="text-muted-foreground">
+                Student management features coming soon...
+              </p>
+            </div>
+          </div>
+        );
+
+      case "exports":
+        return (
+          <div className="space-y-6">
+            <h2 className="text-2xl font-bold text-foreground">Exports</h2>
+            <div className="bg-card border border-border rounded-lg p-8 text-center">
+              <p className="text-muted-foreground">
+                Export functionality coming soon...
+              </p>
+            </div>
+          </div>
+        );
+
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <div className="flex">
+      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
+      <main className="flex-1 p-6">{renderContent()}</main>
+    </div>
+  );
+};
+
+export default Index;case "analytics":
+  return (
+    <div className="space-y-6">
+      <h2 className="text-2xl font-bold text-foreground">Analytics Dashboard</h2>
+      <div className="bg-card border border-border rounded-lg p-8 text-center">
+        <p className="text-muted-foreground">
+          Advanced analytics and reporting features coming soon...
+        </p>
+      </div>
+    </div>
+  );
+
+case "answer-keys":
+  return (
+    <div className="space-y-6">
+      <h2 className="text-2xl font-bold text-foreground">Answer Key Management</h2>
+      <div className="bg-card border border-border rounded-lg p-8 text-center">
+        <p className="text-muted-foreground">
+          Answer key management interface coming soon...
+        </p>
+      </div>
+    </div>
+  );
+
+case "students":
+  return (
+    <div className="space-y-6">
+      <h2 className="text-2xl font-bold text-foreground">Student Management</h2>
+      <div className="bg-card border border-border rounded-lg p-8 text-center">
+        <p className="text-muted-foreground">
+          Student management features coming soon...
+        </p>
+      </div>
+    </div>
+  );
+
+case "exports":
+  return (
+    <div className="space-y-6">
+      <h2 className="text-2xl font-bold text-foreground">Exports</h2>
+      <div className="bg-card border border-border rounded-lg p-8 text-center">
+        <p className="text-muted-foreground">
+          Export functionality coming soon...
+        </p>
+      </div>
+    </div>
+  );
